@@ -1,0 +1,20 @@
+
+{
+  "name": "S3race",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-scality": "scality/Guidelines"
+  },
+  "dependencies": {
+    "s3blaster": "scality/s3blaster",
+    "mocha": "^3.0.2"
+  }
+}
