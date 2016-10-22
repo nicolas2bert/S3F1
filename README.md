@@ -3,7 +3,8 @@
 
 ## Start
 
-`npm start`
+By default:
+`HOST=localhost PORT=8000 npm start`
 
 Note: Do not forget to start S3.
 http://github.com/scality/s3blaster
