@@ -3,7 +3,9 @@
 
 ## Start
 
-`npm start`
+By default:
+`HOST=localhost PORT=8000 ACCESSKEYID=your_access_key_id
+SECRETACCESSKEY=your_secret_access_key npm start`
 
 Note: Do not forget to start S3.
 http://github.com/scality/s3blaster

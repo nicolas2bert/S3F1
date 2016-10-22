@@ -1,9 +1,11 @@
 const runS3Blaster = require('s3blaster').RunS3Blaster;
 
 const outputDir = `${__dirname}/results`;
+const env = process.env;
+
 const params = {
-    host: 'localhost',
-    port: 8000,
+    host: env.HOST || 'localhost',
+    port: env.PORT || 8000,
     forksNb: 1,
     bucketsNb: 1,
     bucketPrefix: 'bkts3std',
