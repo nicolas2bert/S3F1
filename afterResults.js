@@ -14,14 +14,14 @@ let fastestTimes = [
 	{ 'numParallelReq': 512, 
 		'latency': 0 }
 ];
-const rl = readline.createInterface({
-	input: fs.createReadStream('./results/hello/scality/worker1/s3standard_stats.txt'),
-});
 
-function parseLines() {
+module.exports.parseLines = () => {
 	let lineNumber = 0;
-	// console.log(fastestTimes);
+	const rl = readline.createInterface({
+		input: fs.createReadStream('./results/hello/scality/worker1/s3standard_stats.txt'),
+	});	
 	rl.on('line', line => {
+		console.log('in on line event');
 		lineNumber += 1;
 		if (lineNumber > 7 && lineNumber < 53) {
 			const parRequests = line.toString().split(/\s+/)[2];
@@ -37,14 +37,16 @@ function parseLines() {
 			}
 		}
 	});
+	console.log('before close');
 	rl.on('close', () => {
-		fs.writeFile('./results.json', JSON.stringify(fastestTimes), err => {
+		console.log('in close before writefile');
+		return fs.writeFile('./results.json', JSON.stringify(fastestTimes), err => {
 			if (err) {
 				return console.log(err);
 			}
+			console.log('it works!');
 			return true;
 		});
 	});
-}
+};
 
-parseLines();

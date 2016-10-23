@@ -2,6 +2,7 @@ const runS3Blaster = require('s3blaster').RunS3Blaster;
 
 const outputDir = `${__dirname}/results`;
 const env = process.env;
+const parsing = require('./afterResults.js');
 
 const params = {
     host: env.HOST || 'localhost',
@@ -32,9 +33,18 @@ const params = {
 };
 
 
-process.nextTick(runS3Blaster.start, params, err => {
+// process.nextTick(runS3Blaster.start, params, err => {
+//     if (err) {
+//         return console.log('err, s3f1 is not cool', err);
+//     }
+//     console.log('Wahouuu');
+//     return parsing.parseLines();
+// });
+
+runS3Blaster.start(params, err => {
     if (err) {
-        console.log('err, s3f1 is not cool', err);
+        return console.log('err, s3f1 is not cool', err);
     }
     console.log('Wahouuu');
+    return parsing.parseLines();
 });
