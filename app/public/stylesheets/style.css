@@ -16,10 +16,6 @@ a {
 }
 .boxes {
   padding: 3px;
-
-}
-.redbox {
   background: #ff0000;
-  width: 5px;
   height: 5px;
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const results = require('../../results.json');
+const resultsAWS = require('../../resultsAWS.json');
 const exec = require('child_process').exec;
 
 /* GET home page. */
@@ -32,11 +32,11 @@ router.get('/blast', (req, res) => {
     }, 20000);
 
     res.render('blast', { title: 'Blasting S3...',
-                          results: JSON.stringify(results, null, 2),
+                          results: JSON.stringify(resultsAWS, null, 2),
                           parallelReq: JSON.parse(
-                              results[1].numParallelReq).toString(),
+                              resultsAWS[1].numParallelReq).toString(),
                           latencyTime: JSON.parse(
-                              results[1].latency).toString() + 'px',
+                              resultsAWS[1].latency).toString() + 'px',
                         });
 });
 

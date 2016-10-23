@@ -2,11 +2,7 @@ extends layout
 
 block content
   h1 #{title}
-    small Racing Scality and AWS
   p #{results}
-  form(action='/blast', method='get')
-    input#blastTrigger.btn.btn-danger.btn-lg(type='submit', value='Blast Off!', name='Submit')
 
   - for (var x = 0; x < parallelReq; x++)
-    ul(id='x' class='boxes')
-      .redbox(style="width:#{latencyTime}px")
+    ul.boxes(style='width:#{latencyTime}')
