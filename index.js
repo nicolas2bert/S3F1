@@ -25,7 +25,7 @@ const params = {
     observationsNb: 1e6,
     workOnCurrObjs: false,
     runTime: 5,
-    dontCleanDB: false,
+    dontCleanDB: true,
     ssm: false,
     dirPath: outputDir,
     output: 's3standard',

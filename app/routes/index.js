@@ -16,14 +16,6 @@ router.get('/', (req, res) => {
 });
 
 router.get('/blast', (req, res) => {
-    // exec('fab -f ./Local-Fabric/fabfile.py deploy_local',
-    //     (error, stdout) => {
-    //         console.log('stdout: ' + stdout);
-    //         if (error !== null) {
-    //              console.log('exec error: ' + error);
-    //         }
-    //     });
-
     const deploymentSpawn = spawn('fab', ['-f', './Local-Fabric/fabfile.py',
     'deploy_local']);
 
@@ -36,20 +28,16 @@ router.get('/blast', (req, res) => {
     });
 
     deploymentSpawn.on('close', code => {
-      console.log(`deploymentSpawn child process exited with code ${code}`);
+        console.log(`deploymentSpawn child process exited with code ${code}`);
+        console.log('Start BLASTING!!');
     });
 
-    setTimeout(function(){
-        console.log('Start BLASTING!!');
+    setTimeout(function () {
         const runSpawn = spawn('fab', ['-f', './Local-Fabric/fabfile.py',
-        'run_blaster']);
+                                       'run_blaster']);
 
         runSpawn.stdout.on('data', data => {
            console.log(`runSpawn stdout: ${data}`);
-        });
-
-        runSpawn.stderr.on('data', data => {
-           console.log(`runSpawn stderr: ${data}`);
         });
 
         runSpawn.on('close', code => {
@@ -63,28 +51,6 @@ router.get('/blast', (req, res) => {
                         });
         });
     }, 10000);
-    // const ls = spawn('fab', ['-f', './Local-Fabric/fabfile.py',
-    // 'deploy_local']);
-
-    //     ls.stdout.on('data', data => {
-    //        console.log(`stdout: ${data}`);
-    //     });
-    //
-    //     ls.stderr.on('data', data => {
-    //        console.log(`stderr: ${data}`);
-    //     });
-    //
-    //     ls.on('close', code => {
-    //       console.log(`child process exited with code ${code}`);
-    //     });
-    //     exec('fab -f ./Local-Fabric/fabfile.py run_blaster',
-    //         (error, stdout) => {
-    //             console.log('stdout: ' + stdout);
-    //             if (error !== null) {
-    //                  console.log('exec error: ' + error);
-    //             }
-    //         });
-    // }, 20000);
 });
 
 module.exports = router;
