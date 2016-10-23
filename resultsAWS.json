@@ -1,0 +1,22 @@
+[
+  {
+      "numParallelReq": 32,
+      "latency": 50
+  },
+  {
+      "numParallelReq": 64,
+      "latency": 100
+  },
+  {
+      "numParallelReq": 128,
+      "latency": 150
+  },
+  {
+      "numParallelReq": 256,
+      "latency": 200
+  },
+  {
+      "numParallelReq": 512,
+      "latency": 300
+  }
+]
