@@ -14,8 +14,24 @@ a {
   text-align: center;
 
 }
+
 .boxes {
-  padding: 3px;
   background: #ff0000;
   height: 5px;
+  margin-left: 20px;
+}
+
+.raceTitle {
+    padding-top: 50px;
+    text-align: left;
+}
+
+.raceEnv {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+span {
+    text-align: left;
 }

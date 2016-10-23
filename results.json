@@ -1,1 +1,16 @@
-[{"numParallelReq":32,"latency":0},{"numParallelReq":64,"latency":0},{"numParallelReq":128,"latency":0},{"numParallelReq":256,"latency":0},{"numParallelReq":512,"latency":0}]
+[{
+    "numParallelReq": 32,
+    "latency": "70.03"
+}, {
+    "numParallelReq": 64,
+    "latency": "126.02"
+}, {
+    "numParallelReq": 128,
+    "latency": "146.36"
+}, {
+    "numParallelReq": 256,
+    "latency": "299.20"
+}, {
+    "numParallelReq": 512,
+    "latency": "664.16"
+}]
