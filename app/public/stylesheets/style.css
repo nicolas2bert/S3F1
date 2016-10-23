@@ -4,6 +4,7 @@ html, body {
   -moz-background-size: repeat;
   -o-background-size: repeat;
   background-size: repeat;
+  overflow-y: auto;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   flex-direction: column;
 }
-
+/*TYPOGRAPHY*/
 input, i{
       opacity: 0.9;
       transition: all 0.3s ease 0s;
@@ -19,8 +20,13 @@ input, i{
 input:hover, i:hover {
       opacity: 1;
 }
+i{
+  color: inherit;
 
-
+}
+i:hover {
+  color: #016ecd;
+}
 h1,h2,h3,h4,h5,h6,a,em,strong,p {
   color: #cccccc !important;
   font-family:"Trebuchet MS", sans-serif !important;
@@ -36,13 +42,29 @@ em {
   color: #911010;
   text-shadow: 1px 1px 10px rgba(100, 100, 100, 25);
 }
+/*HEADER*/
+header{
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), #000000); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image:    -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), #000000); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient(bottom, rgba(0, 0, 0, 0), #000000); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to top, rgba(0, 0, 0, 0), #000000); /* Standard syntax; must be last */
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none !important;
+}
+.mainTitle {
+  text-shadow: 5px 5px 5px rgba(100,100,100,25);
+  text-align: center;
+}
 
+/*MAIN*/
 #main {
   text-align: center;
 
 }
 #blastTrigger {
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 10px 10px 5px rgba(100,100,100,0.5);
   }
 .boxes {
   background: #ff0000;
@@ -60,20 +82,22 @@ em {
     margin-bottom: 0px;
     text-align: left;
 }
+#resultsDiv {
+  padding: 2em;
 
+}
+/*FOOTER*/
 span {
     text-align: left;
 }
 #git {
   padding-top: 15px;
-
 }
-#foot{
+footer{
   text-align: center;
   width: 100%;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 75px;
   background: black;
+
+
 }

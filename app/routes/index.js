@@ -9,9 +9,8 @@ const spawn = require('child_process').spawn;
 
 /* GET home page. */
 router.get('/', (req, res) => {
-    res.render('index', { title: 'S3F1',
-                          subtitle: 'Racing Scality and AWS',
-                        }
+    res.render('index', { title: 'Ready to Race?',
+                          }
     );
 });
 

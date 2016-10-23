@@ -2,11 +2,14 @@ extends layout
 
 block content
   h1 #{title}
+  form(action='/blast', method='get')
+    input#blastTrigger.btn.btn-danger.btn-lg(type='submit', value='Race Again?', name='Submit')
   p #{results}
 
-  - for (var x = 0; x < len; x++)
-    h4.raceTitle #{resultsAWS[x].numParallelReq} parallel request race:
-    p.raceEnv AWS latency
-    ul.boxes(style='width:#{resultsAWS[x].latency}px')
-    p.raceEnv Scality latency
-    ul.boxes(style='width:#{resultsLocal[x].latency}px')
+  #resultsDiv
+    - for (var x = 0; x < len; x++)
+      h4.raceTitle #{resultsAWS[x].numParallelReq} parallel request race:
+      p.raceEnv AWS latency
+      ul.boxes(style='width:#{resultsAWS[x].latency}px')
+      p.raceEnv Scality latency
+      ul.boxes(style='width:#{resultsLocal[x].latency}px')
