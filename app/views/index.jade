@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1 Welcome to #{title}
-  p #{results}
+  #main
+    .content-fluid
+      .row
+        .col-lg-12
+          h1 #{title}
+            small Racing Scality and AWS
+          p #{results}
+          button(type='submit' class='btn btn-default btn-xl' id='runblaster') Run Test
