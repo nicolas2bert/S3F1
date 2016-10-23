@@ -12,6 +12,8 @@ http://github.com/scality/s3blaster
 
 `S3BACKEND=mem npm start`
 
+Start the web application interface: `npm run start-web`
+
 ## Collaborate
 
 Fork this repo using: https://help.github.com/articles/fork-a-repo/
