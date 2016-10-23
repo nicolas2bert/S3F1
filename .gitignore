@@ -9,3 +9,6 @@ logs
 results
 EC2-Fabric/*.pyc
 Local-Fabric/*.pyc
+
+# Results
+resultsAWS.json
