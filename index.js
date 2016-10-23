@@ -23,7 +23,7 @@ const params = {
     nextKey: 'seq',
     observationsNb: 1e6,
     workOnCurrObjs: false,
-    runTime: 10,
+    runTime: 5,
     dontCleanDB: false,
     ssm: false,
     dirPath: outputDir,
