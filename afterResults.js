@@ -23,7 +23,7 @@ module.exports.parseLines = () => {
 	rl.on('line', line => {
 		console.log('in on line event');
 		lineNumber += 1;
-		if (lineNumber > 7 && lineNumber < 53) {
+		if (lineNumber > 7) {
 			const parRequests = line.toString().split(/\s+/)[2];
 			const latencyTime = line.toString().split(/\s+/)[3];
 			let index = 0;

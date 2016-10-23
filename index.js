@@ -46,5 +46,6 @@ runS3Blaster.start(params, err => {
         return console.log('err, s3f1 is not cool', err);
     }
     console.log('Wahouuu');
+    // parsing.parseLines();
     return parsing.parseLines();
 });
