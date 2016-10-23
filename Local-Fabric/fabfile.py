@@ -1,10 +1,11 @@
 from fabric.api import *
 
 def deploy_local():
-    local('docker run -d -p 8000:8000 scality/s3server:mem-latest')    
-    local('echo "Waiting for docker container..."')
-    local('sleep 20')
+    local('echo "Waiting 20 seconds for docker container..."')
+    local('docker run -d -p 8000:8000 scality/s3server:mem-latest')
     local('ACCESSKEYID=your_access_key_id SECRETACCESSKEY=your_secret_access_key')
+
+def run_blaster():
     local('npm start')
 
 # If restart is needed, run:
