@@ -4,5 +4,6 @@ node_modules
 
 # S3blaster results
 results
-
+EC2-Fabric/*.pyc
+Local-Fabric/*.pyc
 gnuplot.log
