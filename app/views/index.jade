@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  h1 #{title}
+  h1
+    em #{title}
     small Racing Scality and AWS
   img(src='http://f1inschools.mx/images/registro/carrof1.png', alt='F1 car', height='200', width='350')
   form(action='/blast', method='get')
-    input#blastTrigger.btn.btn-danger.btn-lg(type='submit', value='Blast Off!', name='Submit')
+    input#blastTrigger.btn.btn-danger.btn-lg(type='submit', value='Start Your Engines', name='Submit')

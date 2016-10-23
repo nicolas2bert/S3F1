@@ -1,20 +1,49 @@
+html, body {
+  background: url(../resources/carbonFiber-bkg.jpg) repeat center center fixed;
+  -webkit-background-size: repeat;
+  -moz-background-size: repeat;
+  -o-background-size: repeat;
+  background-size: repeat;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
   flex-direction: column;
-  background: #328589;
 }
 
+input, i{
+      opacity: 0.9;
+      transition: all 0.3s ease 0s;
+}
+input:hover, i:hover {
+      opacity: 1;
+}
+
+
+h1,h2,h3,h4,h5,h6,a,em,strong,p {
+  color: #cccccc !important;
+  font-family:"Trebuchet MS", sans-serif !important;
+}
+small {
+  color: #cdcdcd !important;
+
+}
 a {
   color: #00B7FF;
+}
+em {
+  color: #911010;
+  text-shadow: 1px 1px 10px rgba(100, 100, 100, 25);
 }
 
 #main {
   text-align: center;
 
 }
-
+#blastTrigger {
+    box-shadow: 10px 10px 5px #888888;
+  }
 .boxes {
   background: #ff0000;
   height: 5px;
@@ -34,4 +63,17 @@ a {
 
 span {
     text-align: left;
+}
+#git {
+  padding-top: 15px;
+
+}
+#foot{
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: black;
 }
